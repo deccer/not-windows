@@ -44,6 +44,7 @@ pacstrap $MNT base base-devel git
 genfstab -U $MNT >> $MNT/etc/fstab
 
 cp base-0-variables.sh $MNT
+cp base-2-chroot.sh $MNT
 cp base-2-helpers.sh $MNT
 arch-chroot $MNT bash base-2-chroot.sh
 
