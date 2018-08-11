@@ -1,6 +1,5 @@
 manualinstall() {
 	[[ -f /usr/bin/$1 ]] || (
-	dialog --infobox "Installing \"$1\", an AUR helper..." 10 60
 	cd /tmp
 	rm -rf /tmp/$1*
 	curl -sO https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz &&
