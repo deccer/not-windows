@@ -49,11 +49,11 @@ echo "options root=$BLOCKDEVICEROOT rw" >> $BOOTENTRY
 
 systemctl enable dhcpcd.service
 
-echo 'Installation almost complete. Setting passwords'
-echo 'Choose a root password:'
+echo Installation almost complete. Setting passwords
+echo Choose a password for root:
 passwd
 
-echo 'Choose a password for $DEFAULTUSER':
+echo Choose a password for "${DEFAULTUSER}":
 passwd $DEFAULTUSER
 
 manualinstall packer
