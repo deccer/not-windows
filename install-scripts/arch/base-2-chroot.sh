@@ -27,14 +27,13 @@ echo 'root ALL=(ALL) ALL' > /etc/sudoers
 echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 echo '%wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman -Syu,/usr/bin/pacman -Syyu' >> /etc/sudoers
 
-MKINITCPIOCONF=/etc/mkinitcpio.conf
-echo 'MODULES=()' > $MKINITCPIOCONF
-echo 'BINARIES=()' >> $MKINITCPIOCONF
-echo 'FILES=()' >> $MKINITCPIOCONF
-echo 'HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)' >> $MKINITCPIOCONF
-echo 'COMPRESSION=lzma' >> $MKINITCPIOCONF
-
-mkinitcpio -p linux
+#MKINITCPIOCONF=/etc/mkinitcpio.conf
+#echo 'MODULES=()' > $MKINITCPIOCONF
+#echo 'BINARIES=()' >> $MKINITCPIOCONF
+#echo 'FILES=()' >> $MKINITCPIOCONF
+#echo 'HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)' >> $MKINITCPIOCONF
+#echo 'COMPRESSION=lzma' >> $MKINITCPIOCONF
+#mkinitcpio -p linux
 
 LOADERCONF=/boot/loader/loader.conf
 bootctl --path=/boot install
