@@ -40,7 +40,7 @@ mount $BLOCKDEVICEROOT $MNT
 mkdir -p $MNT/boot
 mount $BLOCKDEVICEBOOT $MNT/boot
 
-pacstrap $MNT base base-devel git
+pacstrap $MNT base git
 genfstab -U $MNT >> $MNT/etc/fstab
 
 cp base-0-variables.sh $MNT
