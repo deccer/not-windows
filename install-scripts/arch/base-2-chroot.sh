@@ -4,7 +4,9 @@ set -e
 set -o pipefail
 set -o errtrace
 set -o nounset
-set -o errexit  
+set -o errexit
+
+pacman -Sy linux
 
 source base-0-variables.sh
 source base-2-helpers.sh
