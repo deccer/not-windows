@@ -14,7 +14,7 @@ source base-0-variables.sh
 	echo n
 	echo 1
 	echo 
-	echo +256M
+	echo +512M
 	echo ef00
 	echo n
 	echo 2
