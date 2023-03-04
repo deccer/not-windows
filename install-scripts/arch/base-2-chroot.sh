@@ -46,6 +46,7 @@ echo 'linux   /vmlinuz-linux' >> $BOOTENTRY
 echo 'initrd  /initramfs-linux.img' >> $BOOTENTRY
 echo "options root=$BLOCKDEVICEROOT rw" >> $BOOTENTRY
 
+pacman -S dhcpcd
 systemctl enable dhcpcd.service
 
 echo Installation almost complete. Setting passwords
